@@ -1,19 +1,23 @@
-import re
 #from cpf_cnpj import Documento
-#from validate_docbr import CNPJ
-from TelefonesBr import TelefonesBr
+#from TelefonesBr import TelefonesBr
+from datetime import datetime, timedelta
+from datas_br import DatasBr
 
-telefone = "553187227409"
+hoje = DatasBr()
+print(hoje.tempo_cadastro())
 
-telefone_objeto = TelefonesBr(telefone)
-
-print(telefone_objeto)
 
 
 '''
+cadastro = DatasBr()
+print(cadastro)
+
+telefone = "553187227409"
+telefone_objeto = TelefonesBr(telefone)
+print(telefone_objeto)
+
 exemplo_cnpj = "35379838000112"
 exemplo_cpf = "13473507644"
-
 documento = Documento.cria_documento(exemplo_cnpj)
 print(documento)
 documento = Documento.cria_documento(exemplo_cpf)
